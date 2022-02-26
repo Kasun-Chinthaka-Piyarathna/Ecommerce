@@ -9,7 +9,7 @@ function App() {
             <BrowserRouter>
                 <Header/>
                 <Routes>
-                <Route path="/home" exact component={Home}/>
+                <Route path="/" exact element={<Home/>}/>
                 </Routes>
             </BrowserRouter>
         </div>

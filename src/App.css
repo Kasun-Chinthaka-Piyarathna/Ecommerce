@@ -2,7 +2,7 @@
     text-align: center;
     background: #191920 url("./assets/images/background.svg") no-repeat center top;
     -webkit-font-smoothing: antialiased;
-      max-width: 1020px;
+    max-width: 1020px;
     margin: 0 auto;
     padding: 0 20px 50px;
 }
@@ -54,4 +54,61 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+
+/*home page*/
+.Container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    list-style: none;
+}
+
+.cartItem {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+}
+
+.cartItemImg {
+    align-self: center;
+    max-width: 250px;
+}
+
+.cartItemTitle {
+    font-size: 16px;
+    line-height: 20px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.cartItemButton {
+    background: #7159c1;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.cartItemButton:hover {
+     background: #7159c1;
+ }
+
+.cartItemFooter{
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.cartItemSpan{
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
 }
