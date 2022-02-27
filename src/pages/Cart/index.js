@@ -1,17 +1,20 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import './style.css';
+import '../../App.css';
 import {
-    MdRemoveCircleOutline,
-    MdAddCircleOutline,
-    MdDelete,
+    MdDelete
 } from 'react-icons/md';
-import {stockAvailable} from "../../data";
+import {CartStateContext} from "../../contexts/cart";
 
 export default function Cart() {
 
-    function increment(product) {
-    }
+    const {items: cartItems} = useContext(CartStateContext);
+    const cartTotal = cartItems
+        .map((item) => item.price * item.quantity)
+        .reduce((prev, current) => prev + current, 0);
 
-    function decrement(product) {
+    function getSubTotal(product) {
+        return product.price * product.quantity;
     }
 
     return (
@@ -24,50 +27,40 @@ export default function Cart() {
                     <th>SUBTOTAL</th>
                 </tr>
                 </thead>
-                {/*<tbody className="cartTableBody">*/}
-                {/*{stockAvailable.map(product => (*/}
-                {/*    <tr>*/}
-                {/*        <td>*/}
-                {/*            <img*/}
-                {/*                src={product.image}*/}
-                {/*                alt={product.laptop}*/}
-                {/*            />*/}
-                {/*        </td>*/}
-                {/*        <td>*/}
-                {/*            <strong>{product.laptop}</strong>*/}
-                {/*            <span>{product.priceFormatted}</span>*/}
-                {/*        </td>*/}
-                {/*        <td>*/}
-                {/*            <div>*/}
-                {/*                <button type="button" onClick={() => decrement(product)}>*/}
-                {/*                    <MdRemoveCircleOutline size={20} color="#7159c1"/>*/}
-                {/*                </button>*/}
-                {/*                <input type="number" readOnly value={product.price}/>*/}
-                {/*                <button type="button" onClick={() => increment(product)}>*/}
-                {/*                    <MdAddCircleOutline size={20} color="#7159c1"/>*/}
-                {/*                </button>*/}
-                {/*            </div>*/}
-                {/*        </td>*/}
-                {/*        <td/>*/}
-                {/*        <td>*/}
-                {/*            <strong>{product.subtotal}</strong>*/}
-                {/*        </td>*/}
-                {/*        <td>*/}
-                {/*            <button type="button">*/}
-                {/*                <MdDelete size={20} color="#7159c1"/>*/}
-                {/*            </button>*/}
-                {/*        </td>*/}
-                {/*    </tr>*/}
-                {/*))}*/}
-                {/*</tbody>*/}
+                <tbody className="cartTableBody">
+                {cartItems.map(product => (
+                    <tr>
+                        <td>
+                            <img className="imagePreview"
+                                 src={product.image}
+                                 alt={product.laptop}
+                            />
+                        </td>
+                        <td>
+                            <strong>{product.laptop}</strong>
+                            <span>{product.price}</span>
+                        </td>
+                        <td>
+                            <strong>{product.quantity}</strong>
+                        </td>
+                        <td/>
+                        <td>
+                            <strong>{getSubTotal(product)}</strong>
+                        </td>
+                        <td>
+                            <button type="button">
+                                <MdDelete size={20} color="#7159c1"/>
+                            </button>
+                        </td>
+                    </tr>
+                ))}
+                </tbody>
             </div>
 
             <footer className="cartPageFooter">
-                <button className="cartFooterButton" type="button">Finish your order</button>
-
                 <div className="Total">
                     <span className="TotalTitle">TOTAL</span>
-                    <strong className="TotalAmount">999</strong>
+                    <strong className="TotalAmount">{cartTotal}</strong>
                 </div>
             </footer>
         </div>

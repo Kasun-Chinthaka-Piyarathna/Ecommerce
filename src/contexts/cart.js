@@ -49,6 +49,7 @@ const reducer = (state, action) => {
             throw new Error(`Unknown action: ${action.type}`);
     }
 };
+
 export const addToCart = (dispatch, cartItem) => {
     return dispatch({
         type: "ADD_TO_CART",
