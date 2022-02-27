@@ -164,7 +164,7 @@ export default function Cart() {
     }
 
     function removeProduct(productId) {
-        return (window.confirm('Are you sure you wish to delete this item?'))? removeFromCart(dispatch, productId):false;
+        return (window.confirm('Are you sure you wish to remove this item?'))? removeFromCart(dispatch, productId):false;
     }
 
     const handleSubmit = (e) => {
