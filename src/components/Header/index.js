@@ -4,6 +4,7 @@ import '../../App.css';
 import './style.css';
 import {CartStateContext} from "../../contexts/cart";
 import {MdShoppingCart} from "react-icons/md";
+import {getPrice} from "../../utils/general";
 
 
 export default function Header() {
@@ -24,7 +25,7 @@ export default function Header() {
 
     return (
         <div className="Header">
-            <Link to="/">
+            <Link className="logo" to="/">
                 <h1>LAPTOP HUB</h1>
             </Link>
             <div className="cart">
@@ -32,14 +33,14 @@ export default function Header() {
                     <table>
                         <tbody>
                         <tr>
-                            <td>No. of items</td>
+                            <td>No. of Items</td>
                             <td>:</td>
                             <td>
                                 <strong>{itemsInCart}</strong>
                             </td>
                         </tr>
                         <tr>
-                            <td>No. of Quantity</td>
+                            <td>Total Quantity</td>
                             <td>:</td>
                             <td>
                                 <strong>{cartQuantity}</strong>
@@ -49,7 +50,7 @@ export default function Header() {
                             <td>Sub Total</td>
                             <td>:</td>
                             <td>
-                                <strong>{cartTotal}</strong>
+                                <strong>{getPrice(cartTotal)}</strong>
                             </td>
                         </tr>
                         </tbody>

@@ -1,12 +1,12 @@
-import laptop_1 from '../src/assets/images/laptop_1.jpg';
-import laptop_2 from '../src/assets/images/laptop_2.jpg';
-import laptop_3 from '../src/assets/images/laptop_3.jpg';
-import laptop_4 from '../src/assets/images/laptop_4.jpg';
-import laptop_5 from '../src/assets/images/laptop_5.jpg';
-import laptop_6 from '../src/assets/images/laptop_6.jpg';
-import laptop_7 from '../src/assets/images/laptop_7.jpg';
-import laptop_8 from '../src/assets/images/laptop_8.jpg';
-import laptop_9 from '../src/assets/images/laptop_9.jpg';
+import laptop_1 from '../assets/images/laptop_1.jpg';
+import laptop_2 from '../assets/images/laptop_2.jpg';
+import laptop_3 from '../assets/images/laptop_3.jpg';
+import laptop_4 from '../assets/images/laptop_4.jpg';
+import laptop_5 from '../assets/images/laptop_5.jpg';
+import laptop_6 from '../assets/images/laptop_6.jpg';
+import laptop_7 from '../assets/images/laptop_7.jpg';
+import laptop_8 from '../assets/images/laptop_8.jpg';
+import laptop_9 from '../assets/images/laptop_9.jpg';
 
 export const stockAvailable = [
    {
@@ -17,13 +17,13 @@ export const stockAvailable = [
     },
     {
       "id": 2,
-      "laptop": "Dell Inspiron 3511 (4GB / i5 with Mx330 Graphics)",
+      "laptop": "Dell Inspiron 3511 (4GB / i5)",
       "price": 198500,
       "image": laptop_2
     },
     {
       "id": 3,
-      "laptop": "Dell Inspiron 3511 (i5 with Iris-Xe Graphics)",
+      "laptop": "Dell Inspiron 3511 (i5)",
       "price": 185500,
       "image": laptop_3
     },
@@ -59,7 +59,7 @@ export const stockAvailable = [
     },
     {
         "id": 9,
-        "laptop": "ASUS ROG Zephyrus G15 (GA503QC-HQ075T)",
+        "laptop": "ASUS ROG Zephyrus G15",
         "price": 419000,
         "image": laptop_9
     }

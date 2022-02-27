@@ -11,38 +11,45 @@
 }
 
 .cartItemTitle {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     color: #333;
     margin-top: 5px;
+    text-align: start;
+}
+
+.span {
+    text-align: start;
 }
 
 .cartItemButton {
+    height: 30px;
     background: #7159c1;
     color: #fff;
     border: 0;
     border-radius: 4px;
     overflow: hidden;
-    margin-top: auto;
     display: flex;
     align-items: center;
     transition: background 0.2s;
     align-content: center;
     justify-content: center;
+    margin-top: 5px;
 }
 
-.cartItemButton.added {
+.cartItemButtonClicked {
+    height: 30px;
     background: orange;
     color: #fff;
     border: 0;
     border-radius: 4px;
     overflow: hidden;
-    margin-top: auto;
     display: flex;
     align-items: center;
     transition: background 0.2s;
     align-content: center;
     justify-content: center;
+    margin-top: 5px;
 }
 
 .cartItemButton:hover {
@@ -60,7 +67,6 @@
     flex: 1;
     text-align: center;
     font-weight: bold;
-    height: 30px;
     justify-content: center;
     align-items: center;
     align-content: center;

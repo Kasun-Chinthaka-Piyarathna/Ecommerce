@@ -1,6 +1,6 @@
-import './style.css';
+import '../Home/style.css';
 import React, {useEffect} from 'react';
-import {stockAvailable} from "../../data";
+import {stockAvailable} from "../../storage/data";
 import Product from "../../components/Product";
 
 

@@ -1,7 +1,9 @@
-.app {
-    text-align: center;
-    background: #191920 url("./assets/images/background.svg") no-repeat center top;
+body {
+    background: #6363e1 url("./assets/images/background.svg") no-repeat center top;
     -webkit-font-smoothing: antialiased;
+}
+
+#root {
     max-width: 1020px;
     margin: 0 auto;
     padding: 0 20px 50px;

@@ -1,5 +1,5 @@
 import React, {createContext, useEffect, useReducer} from "react";
-import useLocalStorage from "../hooks/useLocalStorage";
+import useLocalStorage from "../storage/useLocalStorage";
 import {ADD_TO_CART, CLEAR_CART, REMOVE_FROM_CART} from "../constants/general";
 
 const initialState = {
