@@ -4,12 +4,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Prompt
-React in Use. No other third party libraries or modules involved.
-Functional Components instead of Class Components
-React Hooks
-Local Storage
-CSS
-HTML
+React in Use  
+No other third party libraries or modules involved  
+Functional Components instead of Class Components  
+React Hooks  
+Local Storage  
+CSS  
+HTML  
+No Backend. Mock Data in Use  
+
 
 ## Setup 
 Go to root folder and installed required dependencies.
