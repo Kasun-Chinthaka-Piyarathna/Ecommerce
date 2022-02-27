@@ -24,3 +24,11 @@ Run the project
 For Production Build
 ### `npm run build`
 
+![Alt text](src/assets/screenshots/screenshot_1.png?raw=true "Optional Title")
+![Alt text](src/assets/screenshots/screenshot_2.png?raw=true "Optional Title")
+![Alt text](src/assets/screenshots/screenshot_3.png?raw=true "Optional Title")
+![Alt text](src/assets/screenshots/screenshot_4.png?raw=true "Optional Title")
+![Alt text](src/assets/screenshots/screenshot_5.png?raw=true "Optional Title")
+
+
+
