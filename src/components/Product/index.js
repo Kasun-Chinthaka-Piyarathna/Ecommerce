@@ -1,6 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {MdShoppingCart} from 'react-icons/md';
-import '../../App.css';
+import './style.css';
 import {addToCart, CartDispatchContext} from "../../contexts/cart";
 
 export default function Product({data}) {

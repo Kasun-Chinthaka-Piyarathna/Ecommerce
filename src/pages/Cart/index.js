@@ -1,9 +1,6 @@
 import React, {useContext} from 'react';
 import './style.css';
-import '../../App.css';
-import {
-    MdDelete
-} from 'react-icons/md';
+import {MdDelete} from 'react-icons/md';
 import {CartStateContext} from "../../contexts/cart";
 
 export default function Cart() {

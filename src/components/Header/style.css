@@ -1,4 +1,11 @@
-header {
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.header {
     background: white;
     padding: 30px 32px;
     box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.033);
@@ -20,10 +27,9 @@ header {
 
 .cart {
     display: flex;
-    display: -webkit-flex;
-    margin-left: 64px;
-    position: relative;
-    z-index: 99;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.2s;
 }
 
 .cart-info {

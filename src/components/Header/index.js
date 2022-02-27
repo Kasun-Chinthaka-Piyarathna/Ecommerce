@@ -1,10 +1,9 @@
 import React, {useContext} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import '../../App.css';
 import './style.css';
 import {CartStateContext} from "../../contexts/cart";
 import {MdShoppingCart} from "react-icons/md";
-import {useNavigate} from "react-router-dom";
 
 
 export default function Header() {
@@ -28,7 +27,7 @@ export default function Header() {
             <Link to="/">
                 <h1>LAPTOP HUB</h1>
             </Link>
-            <div className="Cart">
+            <div className="cart">
                 <div className="cart-info">
                     <table>
                         <tbody>

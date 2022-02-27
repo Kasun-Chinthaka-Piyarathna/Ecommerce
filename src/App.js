@@ -7,7 +7,7 @@ import CartProvider from "./contexts/cart";
 
 function App() {
     return (
-        <div className="App">
+        <div className="app">
             <CartProvider>
                 <BrowserRouter>
                     <Header/>
