@@ -15,7 +15,7 @@ No Backend. Mock Data in Use
 
 
 ## Setup 
-Go to root folder and installed required dependencies.
+Go to root folder and install required dependencies.
 ### `npm install`
 
 Run the project
