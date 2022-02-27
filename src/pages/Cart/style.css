@@ -37,8 +37,21 @@
 }
 
 .cartTableBody {
+    text-align: left;
     padding: 12px;
     border-bottom: 1px solid #eee;
+}
+
+.cartTableTextStrong {
+    color: #333;
+    display: block;
+}
+
+.cartTableTextSpan {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .Total {

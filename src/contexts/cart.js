@@ -1,5 +1,6 @@
 import React, {createContext, useEffect, useReducer} from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
+import {ADD_TO_CART, CLEAR_CART, REMOVE_FROM_CART} from "../constants/general";
 
 const initialState = {
     isCartOpen: false,
@@ -11,7 +12,7 @@ export const CartDispatchContext = createContext();
 
 const reducer = (state, action) => {
     switch (action.type) {
-        case "ADD_TO_CART":
+        case ADD_TO_CART:
             const id = action.payload.cartItem.id;
             const isOld = state.items.map((item) => item.id).includes(id);
             let cartItems = null;
@@ -33,14 +34,14 @@ const reducer = (state, action) => {
                 ...state,
                 items: cartItems
             };
-        case "REMOVE_FROM_CART":
+        case REMOVE_FROM_CART:
             return {
                 ...state,
                 items: state.items.filter(
                     (item) => item.id !== action.payload.cartItemId
                 )
             };
-        case "CLEAR_CART":
+        case CLEAR_CART:
             return {
                 ...state,
                 ...initialState
@@ -52,7 +53,7 @@ const reducer = (state, action) => {
 
 export const addToCart = (dispatch, cartItem) => {
     return dispatch({
-        type: "ADD_TO_CART",
+        type: ADD_TO_CART,
         payload: {
             cartItem: cartItem
         }
@@ -61,7 +62,7 @@ export const addToCart = (dispatch, cartItem) => {
 
 export const removeFromCart = (dispatch, cartItemId) => {
     return dispatch({
-        type: "REMOVE_FROM_CART",
+        type: REMOVE_FROM_CART,
         payload: {
             cartItemId: cartItemId
         }
@@ -70,7 +71,7 @@ export const removeFromCart = (dispatch, cartItemId) => {
 
 export const clearCart = (dispatch) => {
     return dispatch({
-        type: "CLEAR_CART"
+        type: CLEAR_CART
     });
 };
 
