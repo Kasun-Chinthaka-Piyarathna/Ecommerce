@@ -194,8 +194,8 @@ export default function Cart() {
 
     return (
         <div>
-            <div className="CartContainer">
-                <div className="cartTableDiv">
+            <div className="cart-container">
+                <div className="cart-table-div">
                     <table>
                         <tr>
                             <th>PRODUCT</th>
@@ -206,23 +206,23 @@ export default function Cart() {
                         </tr>
                         {cartItems.map(product => (
                             <tr>
-                                <td className="cartTableData">
-                                    <img className="imagePreview"
+                                <td className="cart-table-data">
+                                    <img className="image-preview"
                                          src={product.image}
                                          alt={product.laptop}
                                     />
                                 </td>
                                 <td>
-                                    <strong className="cartTableTextStrong">{product.laptop}</strong>
-                                    <span className="cartTableTextSpan">{getPrice(product.price)}</span>
+                                    <strong className="cart-table-text-strong">{product.laptop}</strong>
+                                    <span className="cart-table-text-span">{getPrice(product.price)}</span>
                                 </td>
-                                <td className="cartTableData">
-                                    <strong className="cartTableTextStrong">{product.quantity}</strong>
+                                <td className="cart-table-data">
+                                    <strong className="cart-table-text-strong">{product.quantity}</strong>
                                 </td>
-                                <td className="cartTableData">
-                                    <strong className="cartTableTextStrong">{getPrice(getSubTotal(product))}</strong>
+                                <td className="cart-table-data">
+                                    <strong className="cart-table-text-strong">{getPrice(getSubTotal(product))}</strong>
                                 </td>
-                                <td className="cartTableData">
+                                <td className="cart-table-data">
                                     <button type="button" onClick={() => removeProduct(product.id)}>
                                         <MdDelete size={20} color="#7159c1"/>
                                     </button>
@@ -232,10 +232,10 @@ export default function Cart() {
                     </table>
                 </div>
 
-                <footer className="cartPageFooter">
-                    <div className="Total">
-                        <span className="TotalTitle">TOTAL</span>
-                        <strong className="TotalAmount">{getPrice(cartTotal)}</strong>
+                <footer className="cart-page-footer">
+                    <div className="total">
+                        <span className="total-title">TOTAL</span>
+                        <strong className="total-amount">{getPrice(cartTotal)}</strong>
                     </div>
                 </footer>
             </div>
@@ -253,9 +253,9 @@ export default function Cart() {
                                            value={inputValues.firstName}
                                            placeholder="First Name"
                                            required
-                                           className="formInput"
+                                           className="form-input"
                                            onChange={(e) => handleChange(e)}/>
-                                    {validation.firstName && <p className="errorMsg">{validation.firstName}</p>}
+                                    {validation.firstName && <p className="error-msg">{validation.firstName}</p>}
                                 </div>
                                 <div>
                                     <input type="text"
@@ -263,9 +263,9 @@ export default function Cart() {
                                            value={inputValues.lastName}
                                            placeholder="Last Name"
                                            required
-                                           className="formInput"
+                                           className="form-input"
                                            onChange={(e) => handleChange(e)}/>
-                                    {validation.lastName && <p className="errorMsg">{validation.lastName}</p>}
+                                    {validation.lastName && <p className="error-msg">{validation.lastName}</p>}
                                 </div>
                             </div>
                             <div className="field-group">
@@ -275,9 +275,9 @@ export default function Cart() {
                                            value={inputValues.phoneNumber}
                                            placeholder="Phone Number"
                                            required
-                                           className="formInput"
+                                           className="form-input"
                                            onChange={(e) => handleChange(e)}/>
-                                    {validation.phoneNumber && <p className="errorMsg">{validation.phoneNumber}</p>}
+                                    {validation.phoneNumber && <p className="error-msg">{validation.phoneNumber}</p>}
                                 </div>
                                 <div>
                                     <input type="text"
@@ -285,9 +285,9 @@ export default function Cart() {
                                            value={inputValues.street}
                                            placeholder="Door No. & Street"
                                            required
-                                           className="formInput"
+                                           className="form-input"
                                            onChange={(e) => handleChange(e)}/>
-                                    {validation.street && <p className="errorMsg">{validation.street}</p>}
+                                    {validation.street && <p className="error-msg">{validation.street}</p>}
                                 </div>
                             </div>
                             <div className="field-group">
@@ -297,9 +297,9 @@ export default function Cart() {
                                            value={inputValues.city}
                                            placeholder="City"
                                            required
-                                           className="formInput"
+                                           className="form-input"
                                            onChange={(e) => handleChange(e)}/>
-                                    {validation.city && <p className="errorMsg">{validation.city}</p>}
+                                    {validation.city && <p className="error-msg">{validation.city}</p>}
                                 </div>
                                 <div>
                                     <input type="text"
@@ -307,9 +307,9 @@ export default function Cart() {
                                            value={inputValues.state}
                                            placeholder="State"
                                            required
-                                           className="formInput"
+                                           className="form-input"
                                            onChange={(e) => handleChange(e)}/>
-                                    {validation.state && <p className="errorMsg">{validation.state}</p>}
+                                    {validation.state && <p className="error-msg">{validation.state}</p>}
                                 </div>
                             </div>
                             <div className="field-group">
@@ -319,9 +319,9 @@ export default function Cart() {
                                            value={inputValues.postalCode}
                                            placeholder="ZIP/Postal Code"
                                            required
-                                           className="formInput"
+                                           className="form-input"
                                            onChange={(e) => handleChange(e)}/>
-                                    {validation.postalCode && <p className="errorMsg">{validation.postalCode}</p>}
+                                    {validation.postalCode && <p className="error-msg">{validation.postalCode}</p>}
                                 </div>
                                 <div>
                                     <input type="text"
@@ -329,9 +329,9 @@ export default function Cart() {
                                            value={inputValues.country}
                                            placeholder="Country"
                                            required
-                                           className="formInput"
+                                           className="form-input"
                                            onChange={(e) => handleChange(e)}/>
-                                    {validation.country && <p className="errorMsg">{validation.country}</p>}
+                                    {validation.country && <p className="error-msg">{validation.country}</p>}
                                 </div>
                             </div>
 
@@ -344,10 +344,10 @@ export default function Cart() {
                                            value={inputValues.cardholderName}
                                            placeholder="Card Holder Name"
                                            required
-                                           className="formInput"
+                                           className="form-input"
                                            onChange={(e) => handleChange(e)}/>
                                     {validation.cardholderName &&
-                                        <p className="errorMsg">{validation.cardholderName}</p>}
+                                        <p className="error-msg">{validation.cardholderName}</p>}
                                 </div>
                                 <div>
                                     <input type="text"
@@ -355,9 +355,9 @@ export default function Cart() {
                                            value={inputValues.cardNumber}
                                            placeholder="Card Number"
                                            required
-                                           className="formInput"
+                                           className="form-input"
                                            onChange={(e) => handleChange(e)}/>
-                                    {validation.cardNumber && <p className="errorMsg">{validation.cardNumber}</p>}
+                                    {validation.cardNumber && <p className="error-msg">{validation.cardNumber}</p>}
                                 </div>
                             </div>
                             <div className="field-group">
@@ -367,9 +367,9 @@ export default function Cart() {
                                            value={inputValues.expiration}
                                            placeholder="Expiration (mm/yy)"
                                            required
-                                           className="formInput"
+                                           className="form-input"
                                            onChange={(e) => handleChange(e)}/>
-                                    {validation.expiration && <p className="errorMsg">{validation.expiration}</p>}
+                                    {validation.expiration && <p className="error-msg">{validation.expiration}</p>}
                                 </div>
                                 <div>
                                     <input type="text"
@@ -377,9 +377,9 @@ export default function Cart() {
                                            value={inputValues.securityCode}
                                            placeholder="Security Code"
                                            required
-                                           className="formInput"
+                                           className="form-input"
                                            onChange={(e) => handleChange(e)}/>
-                                    {validation.securityCode && <p className="errorMsg">{validation.securityCode}</p>}
+                                    {validation.securityCode && <p className="error-msg">{validation.securityCode}</p>}
                                 </div>
                             </div>
                         </div>

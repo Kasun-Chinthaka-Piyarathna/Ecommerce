@@ -1,4 +1,4 @@
-.Container {
+.container {
     text-align: center;
     padding: 40px 0;
     background: #EBF0F5;
@@ -13,7 +13,7 @@
     margin: 0 auto;
 }
 
-.checkmarkParent {
+.checkmark-parent {
     border-radius: 200px;
     height: 200px;
     width: 200px;
@@ -45,7 +45,7 @@
     margin-left: 50px;
 }
 
-.failedMark {
+.failed-mark {
     color: #ea050d;
     font-size: 100px;
     line-height: 200px;

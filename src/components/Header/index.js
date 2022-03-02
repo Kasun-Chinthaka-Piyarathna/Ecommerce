@@ -24,7 +24,7 @@ export default function Header() {
     };
 
     return (
-        <div className="Header">
+        <div className="header">
             <Link className="logo" to="/">
                 <h1>LAPTOP HUB</h1>
             </Link>

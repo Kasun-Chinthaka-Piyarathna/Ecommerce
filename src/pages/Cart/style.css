@@ -1,17 +1,17 @@
-.CartContainer {
+.cart-container {
     padding: 30px;
     background: #fff;
     border-radius: 4px;
 }
 
-.cartPageFooter {
+.cart-page-footer {
     margin-top: 30px;
     display: flow-root;
     justify-content: space-between;
     align-items: center;
 }
 
-.cartFooterButton {
+.cart-footer-button {
     background: #7159c1;
     color: #fff;
     border: 0;
@@ -22,49 +22,49 @@
     transition: background 0.2s;
 }
 
-.cartFooterButton:hover {
+.cart-footer-button:hover {
     background: #7159c1;
 }
 
-.cartTableDiv {
+.cart-table-div {
     width: 100%;
     display: grid;
     grid-template-columns: auto;
 }
 
-.cartTableData {
+.cart-table-data {
     text-align: center;
 }
 
-.cartTableTextStrong {
+.cart-table-text-strong {
     color: #333;
     display: block;
 }
 
-.cartTableTextSpan {
+.cart-table-text-span {
     display: block;
     margin-top: 5px;
     font-size: 14px;
     font-weight: bold;
 }
 
-.Total {
+.total {
     display: flex;
     align-items: baseline;
     float: right;
 }
 
-.TotalTitle {
+.total-title {
     color: #999;
     font-weight: bold;
 }
 
-.TotalAmount {
+.total-amount {
     font-size: 28px;
     margin-left: 5px;
 }
 
-.imagePreview {
+.image-preview {
     height: 100px;
 }
 
@@ -94,7 +94,7 @@
     margin: 20px;
 }
 
-.formInput {
+.form-input {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -104,7 +104,7 @@
     box-sizing: border-box;
 }
 
-.errorMsg {
+.error-msg {
     margin: 0;
     color: #7a0808;
     font-size: 12px;

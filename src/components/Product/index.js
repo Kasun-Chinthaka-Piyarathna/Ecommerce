@@ -19,13 +19,13 @@ export default function Product({data}) {
 
     return (
         <div key={data.id}>
-            <li className="cartItem" key={data.id}>
-                <img className="cartItemImg" src={data.image} alt={data.laptop}/>
-                <strong className="cartItemTitle">{data.laptop}</strong>
+            <li className="cart-item" key={data.id}>
+                <img className="cart-item-img" src={data.image} alt={data.laptop}/>
+                <strong className="cart-item-title">{data.laptop}</strong>
                 <span className="span">{getPrice(data.price)}</span>
-                <button className={!isAdded ? "cartItemButton" : "cartItemButtonClicked"} type="button"
+                <button className={!isAdded ? "cart-item-button" : "cart-item-button-clicked"} type="button"
                         onClick={() => handleProduct()}>
-                    <span className="cartItemSpan"> {!isAdded ? "ADD TO CART" : "✔ ADDED"}</span>
+                    <span className="cart-item-span"> {!isAdded ? "ADD TO CART" : "✔ ADDED"}</span>
                 </button>
             </li>
         </div>
