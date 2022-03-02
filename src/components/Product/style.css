@@ -35,6 +35,7 @@
     align-content: center;
     justify-content: center;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .cart-item-button-clicked {
@@ -54,6 +55,11 @@
 
 .cart-item-button:hover {
     background: #7159c1;
+}
+
+.cart-item-button:active {
+    background-color: #7159c1;
+    transform: translateY(4px);
 }
 
 .cart-item-span {

@@ -5,6 +5,7 @@ import './style.css';
 import {CartStateContext} from "../../contexts/cart";
 import {MdShoppingCart} from "react-icons/md";
 import {getPrice} from "../../utils/general";
+import logo from '../../assets/images/logo.png';
 
 
 export default function Header() {
@@ -26,7 +27,11 @@ export default function Header() {
     return (
         <div className="header">
             <Link className="logo" to="/">
-                <h1>LAPTOP HUB</h1>
+                <img
+                    src={logo}
+                    width="100px"
+                    alt="logo"
+                />
             </Link>
             <div className="cart">
                 <div className="cart-info">

@@ -29,6 +29,8 @@ For Production Build
 ![Alt text](src/assets/screenshots/screenshot_3.png?raw=true "Optional Title")
 ![Alt text](src/assets/screenshots/screenshot_4.png?raw=true "Optional Title")
 ![Alt text](src/assets/screenshots/screenshot_5.png?raw=true "Optional Title")
+![Alt text](src/assets/screenshots/screenshot_6.png?raw=true "Optional Title")
+![Alt text](src/assets/screenshots/screenshot_7.png?raw=true "Optional Title")
 
 
 

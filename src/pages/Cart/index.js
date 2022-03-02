@@ -242,153 +242,138 @@ export default function Cart() {
             <div>
                 <form onSubmit={handleSubmit}>
 
-                    <div className="grid-container">
-                        <label className="form-title">Personal Information</label>
-                        <label className="form-title">Card Information</label>
-                        <div className="grid-item">
-                            <div className="field-group">
-                                <div>
-                                    <input type="text"
-                                           name='firstName'
-                                           value={inputValues.firstName}
-                                           placeholder="First Name"
-                                           required
-                                           className="form-input"
-                                           onChange={(e) => handleChange(e)}/>
-                                    {validation.firstName && <p className="error-msg">{validation.firstName}</p>}
-                                </div>
-                                <div>
-                                    <input type="text"
-                                           name='lastName'
-                                           value={inputValues.lastName}
-                                           placeholder="Last Name"
-                                           required
-                                           className="form-input"
-                                           onChange={(e) => handleChange(e)}/>
-                                    {validation.lastName && <p className="error-msg">{validation.lastName}</p>}
-                                </div>
+                    <div className="order-information-form">
+                        <label className="form-title">CHECKOUT</label>
+                        <div className="grid-container">
+                            <div className="grid-input">
+                                <input type="text"
+                                       name='firstName'
+                                       value={inputValues.firstName}
+                                       placeholder="First Name"
+                                       required
+                                       className="form-input"
+                                       onChange={(e) => handleChange(e)}/>
+                                {validation.firstName && <p className="error-msg">{validation.firstName}</p>}
                             </div>
-                            <div className="field-group">
-                                <div>
-                                    <input type="text"
-                                           name='phoneNumber'
-                                           value={inputValues.phoneNumber}
-                                           placeholder="Phone Number"
-                                           required
-                                           className="form-input"
-                                           onChange={(e) => handleChange(e)}/>
-                                    {validation.phoneNumber && <p className="error-msg">{validation.phoneNumber}</p>}
-                                </div>
-                                <div>
-                                    <input type="text"
-                                           name='street'
-                                           value={inputValues.street}
-                                           placeholder="Door No. & Street"
-                                           required
-                                           className="form-input"
-                                           onChange={(e) => handleChange(e)}/>
-                                    {validation.street && <p className="error-msg">{validation.street}</p>}
-                                </div>
+                            <div className="grid-input">
+                                <input type="text"
+                                       name='lastName'
+                                       value={inputValues.lastName}
+                                       placeholder="Last Name"
+                                       required
+                                       className="form-input"
+                                       onChange={(e) => handleChange(e)}/>
+                                {validation.lastName && <p className="error-msg">{validation.lastName}</p>}
                             </div>
-                            <div className="field-group">
-                                <div>
-                                    <input type="text"
-                                           name='city'
-                                           value={inputValues.city}
-                                           placeholder="City"
-                                           required
-                                           className="form-input"
-                                           onChange={(e) => handleChange(e)}/>
-                                    {validation.city && <p className="error-msg">{validation.city}</p>}
-                                </div>
-                                <div>
-                                    <input type="text"
-                                           name='state'
-                                           value={inputValues.state}
-                                           placeholder="State"
-                                           required
-                                           className="form-input"
-                                           onChange={(e) => handleChange(e)}/>
-                                    {validation.state && <p className="error-msg">{validation.state}</p>}
-                                </div>
+                            <div className="grid-input">
+                                <input type="text"
+                                       name='phoneNumber'
+                                       value={inputValues.phoneNumber}
+                                       placeholder="Phone Number"
+                                       required
+                                       className="form-input"
+                                       onChange={(e) => handleChange(e)}/>
+                                {validation.phoneNumber && <p className="error-msg">{validation.phoneNumber}</p>}
                             </div>
-                            <div className="field-group">
-                                <div>
-                                    <input type="text"
-                                           name='postalCode'
-                                           value={inputValues.postalCode}
-                                           placeholder="ZIP/Postal Code"
-                                           required
-                                           className="form-input"
-                                           onChange={(e) => handleChange(e)}/>
-                                    {validation.postalCode && <p className="error-msg">{validation.postalCode}</p>}
-                                </div>
-                                <div>
-                                    <input type="text"
-                                           name='country'
-                                           value={inputValues.country}
-                                           placeholder="Country"
-                                           required
-                                           className="form-input"
-                                           onChange={(e) => handleChange(e)}/>
-                                    {validation.country && <p className="error-msg">{validation.country}</p>}
-                                </div>
+                            <div className="grid-input">
+                                <input type="text"
+                                       name='street'
+                                       value={inputValues.street}
+                                       placeholder="Door No. & Street"
+                                       required
+                                       className="form-input"
+                                       onChange={(e) => handleChange(e)}/>
+                                {validation.street && <p className="error-msg">{validation.street}</p>}
                             </div>
-
-                        </div>
-                        <div className="grid-item">
-                            <div className="field-group">
-                                <div>
-                                    <input type="text"
-                                           name='cardholderName'
-                                           value={inputValues.cardholderName}
-                                           placeholder="Card Holder Name"
-                                           required
-                                           className="form-input"
-                                           onChange={(e) => handleChange(e)}/>
-                                    {validation.cardholderName &&
-                                        <p className="error-msg">{validation.cardholderName}</p>}
-                                </div>
-                                <div>
-                                    <input type="text"
-                                           name='cardNumber'
-                                           value={inputValues.cardNumber}
-                                           placeholder="Card Number"
-                                           required
-                                           className="form-input"
-                                           onChange={(e) => handleChange(e)}/>
-                                    {validation.cardNumber && <p className="error-msg">{validation.cardNumber}</p>}
-                                </div>
+                            <div className="grid-input">
+                                <input type="text"
+                                       name='city'
+                                       value={inputValues.city}
+                                       placeholder="City"
+                                       required
+                                       className="form-input"
+                                       onChange={(e) => handleChange(e)}/>
+                                {validation.city && <p className="error-msg">{validation.city}</p>}
                             </div>
-                            <div className="field-group">
-                                <div>
-                                    <input type="text"
-                                           name='expiration'
-                                           value={inputValues.expiration}
-                                           placeholder="Expiration (mm/yy)"
-                                           required
-                                           className="form-input"
-                                           onChange={(e) => handleChange(e)}/>
-                                    {validation.expiration && <p className="error-msg">{validation.expiration}</p>}
-                                </div>
-                                <div>
-                                    <input type="text"
-                                           name='securityCode'
-                                           value={inputValues.securityCode}
-                                           placeholder="Security Code"
-                                           required
-                                           className="form-input"
-                                           onChange={(e) => handleChange(e)}/>
-                                    {validation.securityCode && <p className="error-msg">{validation.securityCode}</p>}
-                                </div>
+                            <div className="grid-input">
+                                <input type="text"
+                                       name='state'
+                                       value={inputValues.state}
+                                       placeholder="State"
+                                       required
+                                       className="form-input"
+                                       onChange={(e) => handleChange(e)}/>
+                                {validation.state && <p className="error-msg">{validation.state}</p>}
+                            </div>
+                            <div className="grid-input">
+                                <input type="text"
+                                       name='postalCode'
+                                       value={inputValues.postalCode}
+                                       placeholder="ZIP/Postal Code"
+                                       required
+                                       className="form-input"
+                                       onChange={(e) => handleChange(e)}/>
+                                {validation.postalCode && <p className="error-msg">{validation.postalCode}</p>}
+                            </div>
+                            <div className="grid-input">
+                                <input type="text"
+                                       name='country'
+                                       value={inputValues.country}
+                                       placeholder="Country"
+                                       required
+                                       className="form-input"
+                                       onChange={(e) => handleChange(e)}/>
+                                {validation.country && <p className="error-msg">{validation.country}</p>}
+                            </div>
+                            <div className="grid-input">
+                                <input type="text"
+                                       name='cardholderName'
+                                       value={inputValues.cardholderName}
+                                       placeholder="Card Holder Name"
+                                       required
+                                       className="form-input"
+                                       onChange={(e) => handleChange(e)}/>
+                                {validation.cardholderName &&
+                                    <p className="error-msg">{validation.cardholderName}</p>}
+                            </div>
+                            <div className="grid-input">
+                                <input type="text"
+                                       name='cardNumber'
+                                       value={inputValues.cardNumber}
+                                       placeholder="Card Number"
+                                       required
+                                       className="form-input"
+                                       onChange={(e) => handleChange(e)}/>
+                                {validation.cardNumber && <p className="error-msg">{validation.cardNumber}</p>}
+                            </div>
+                            <div className="grid-input">
+                                <input type="text"
+                                       name='expiration'
+                                       value={inputValues.expiration}
+                                       placeholder="Expiration (mm/yy)"
+                                       required
+                                       className="form-input"
+                                       onChange={(e) => handleChange(e)}/>
+                                {validation.expiration && <p className="error-msg">{validation.expiration}</p>}
+                            </div>
+                            <div className="grid-input">
+                                <input type="text"
+                                       name='securityCode'
+                                       value={inputValues.securityCode}
+                                       placeholder="Security Code"
+                                       required
+                                       className="form-input"
+                                       onChange={(e) => handleChange(e)}/>
+                                {validation.securityCode && <p className="error-msg">{validation.securityCode}</p>}
                             </div>
                         </div>
+                        <input type="submit" className="checkout-btn" disabled={disable} value="Place Order"/>
                     </div>
 
-                    <input type="submit" className="checkout-btn" disabled={disable} value="Place Order"/>
 
                 </form>
             </div>
         </div>
-    );
+    )
+        ;
 }

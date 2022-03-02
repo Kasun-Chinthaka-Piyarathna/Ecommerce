@@ -9,7 +9,7 @@ export default function Home() {
     });
 
     return (
-        <div className="container">
+        <div className="home-container">
             {stockAvailable.map((data, key) => {
                 return <Product key={data.id} data={data}/>;
             })}
