@@ -1,6 +1,6 @@
 import React, {createContext, useEffect, useReducer} from "react";
 import useLocalStorage from "../storage/useLocalStorage";
-import {ADD_TO_CART, CLEAR_CART, REMOVE_FROM_CART} from "../constants/general";
+import {ADD_TO_CART, CART_ITEMS, CLEAR_CART, REMOVE_FROM_CART} from "../constants/general";
 
 const initialState = {
     isCartOpen: false,
@@ -77,7 +77,7 @@ export const clearCart = (dispatch) => {
 
 const CartProvider = ({children}) => {
     const [persistedCartItems, setPersistedCartItems] = useLocalStorage(
-        "cartItems",
+        CART_ITEMS,
         []
     );
     const persistedCartState = {

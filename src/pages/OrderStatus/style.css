@@ -12,12 +12,13 @@
     display: inline-block;
     margin: 0 auto;
 }
-.checkmarkParent{
-    border-radius:200px;
-    height:200px;
-    width:200px;
+
+.checkmarkParent {
+    border-radius: 200px;
+    height: 200px;
+    width: 200px;
     background: #F8FAF5;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 .status {
@@ -32,20 +33,21 @@
 .message {
     color: #404F5E;
     font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
-    font-size:20px;
+    font-size: 20px;
     margin: 0;
     text-align: center;
 }
+
 .checkmark {
     color: #9ABC66;
     font-size: 100px;
     line-height: 200px;
-    margin-left:50px;
+    margin-left: 50px;
 }
 
 .failedMark {
     color: #ea050d;
     font-size: 100px;
     line-height: 200px;
-    margin-left:50px;
+    margin-left: 50px;
 }

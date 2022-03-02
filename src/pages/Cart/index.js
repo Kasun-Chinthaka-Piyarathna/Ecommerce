@@ -1,8 +1,8 @@
-import React, {useContext, useState, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import './style.css';
 import {MdDelete} from 'react-icons/md';
-import {CartDispatchContext, CartStateContext, removeFromCart, clearCart} from "../../contexts/cart";
-import {Link, useNavigate} from 'react-router-dom';
+import {CartDispatchContext, CartStateContext, clearCart, removeFromCart} from "../../contexts/cart";
+import {useNavigate} from 'react-router-dom';
 import {getPrice} from "../../utils/general";
 
 export default function Cart() {
@@ -197,22 +197,22 @@ export default function Cart() {
             <div className="CartContainer">
                 <div className="cartTableDiv">
                     <table>
-                        <tr >
-                            <th >PRODUCT</th>
-                            <th >DESCRIPTION</th>
-                            <th >AMOUNT</th>
-                            <th >SUB TOTAL</th>
-                            <th >ACTION</th>
+                        <tr>
+                            <th>PRODUCT</th>
+                            <th>DESCRIPTION</th>
+                            <th>AMOUNT</th>
+                            <th>SUB TOTAL</th>
+                            <th>ACTION</th>
                         </tr>
                         {cartItems.map(product => (
-                            <tr >
+                            <tr>
                                 <td className="cartTableData">
                                     <img className="imagePreview"
                                          src={product.image}
                                          alt={product.laptop}
                                     />
                                 </td>
-                                <td >
+                                <td>
                                     <strong className="cartTableTextStrong">{product.laptop}</strong>
                                     <span className="cartTableTextSpan">{getPrice(product.price)}</span>
                                 </td>
