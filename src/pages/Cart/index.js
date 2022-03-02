@@ -1,8 +1,8 @@
 import React, {useContext, useState, useEffect} from 'react';
 import './style.css';
 import {MdDelete} from 'react-icons/md';
-import {CartDispatchContext, CartStateContext, removeFromCart,clearCart} from "../../contexts/cart";
-import {Link,useNavigate} from 'react-router-dom';
+import {CartDispatchContext, CartStateContext, removeFromCart, clearCart} from "../../contexts/cart";
+import {Link, useNavigate} from 'react-router-dom';
 import {getPrice} from "../../utils/general";
 
 export default function Cart() {
@@ -143,9 +143,9 @@ export default function Cart() {
             errors.securityCode = "";
         }
 
-        if(!validateFailed){
+        if (!validateFailed) {
             setDisable(false);
-        }else {
+        } else {
             setDisable(true);
         }
 
@@ -164,19 +164,29 @@ export default function Cart() {
     }
 
     function removeProduct(productId) {
-        return (window.confirm('Are you sure you wish to remove this item?'))? removeFromCart(dispatch, productId):false;
+        return (window.confirm('Are you sure you wish to remove this item?')) ? removeFromCart(dispatch, productId) : false;
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         //clear cart
         clearCart(dispatch);
-        if(inputValues.cardNumber.includes("1234")){
+        if (inputValues.cardNumber.includes("1234")) {
             //simulate order failure
-            navigate('/order-status',{state:{name:inputValues.firstName+" "+inputValues.lastName,status:false}});
-        }else{
+            navigate('/order-status', {
+                state: {
+                    name: inputValues.firstName + " " + inputValues.lastName,
+                    status: false
+                }
+            });
+        } else {
             //simulate order success
-            navigate('/order-status',{state:{name:inputValues.firstName+" "+inputValues.lastName,status:true}});
+            navigate('/order-status', {
+                state: {
+                    name: inputValues.firstName + " " + inputValues.lastName,
+                    status: true
+                }
+            });
         }
 
     };
@@ -185,43 +195,41 @@ export default function Cart() {
     return (
         <div>
             <div className="CartContainer">
-                <div className="cartTable">
-                    <thead className="cartTableHead">
-                    <tr className="table-heads">
-                        <th className="cartTableHead">PRODUCT</th>
-                        <th className="cartTableHead">DESCRIPTION</th>
-                        <th className="cartTableHead">AMOUNT</th>
-                        <th className="cartTableHead">SUB TOTAL</th>
-                        <th className="cartTableHead">ACTION</th>
-                    </tr>
-                    </thead>
-                    <tbody className="cartTableBody">
-                    {cartItems.map(product => (
-                        <tr className="table-heads">
-                            <td className="cartTableBody">
-                                <img className="imagePreview"
-                                     src={product.image}
-                                     alt={product.laptop}
-                                />
-                            </td>
-                            <td >
-                                <strong className="cartTableTextStrong">{product.laptop}</strong>
-                                <span className="cartTableTextSpan">{getPrice(product.price)}</span>
-                            </td>
-                            <td >
-                                <strong className="cartTableTextStrong">{product.quantity}</strong>
-                            </td>
-                            <td >
-                                <strong className="cartTableTextStrong">{getPrice(getSubTotal(product))}</strong>
-                            </td>
-                            <td>
-                                <button type="button" onClick={() => removeProduct(product.id)}>
-                                    <MdDelete size={20} color="#7159c1"/>
-                                </button>
-                            </td>
+                <div className="cartTableDiv">
+                    <table>
+                        <tr >
+                            <th >PRODUCT</th>
+                            <th >DESCRIPTION</th>
+                            <th >AMOUNT</th>
+                            <th >SUB TOTAL</th>
+                            <th >ACTION</th>
                         </tr>
-                    ))}
-                    </tbody>
+                        {cartItems.map(product => (
+                            <tr >
+                                <td className="cartTableData">
+                                    <img className="imagePreview"
+                                         src={product.image}
+                                         alt={product.laptop}
+                                    />
+                                </td>
+                                <td >
+                                    <strong className="cartTableTextStrong">{product.laptop}</strong>
+                                    <span className="cartTableTextSpan">{getPrice(product.price)}</span>
+                                </td>
+                                <td className="cartTableData">
+                                    <strong className="cartTableTextStrong">{product.quantity}</strong>
+                                </td>
+                                <td className="cartTableData">
+                                    <strong className="cartTableTextStrong">{getPrice(getSubTotal(product))}</strong>
+                                </td>
+                                <td className="cartTableData">
+                                    <button type="button" onClick={() => removeProduct(product.id)}>
+                                        <MdDelete size={20} color="#7159c1"/>
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
+                    </table>
                 </div>
 
                 <footer className="cartPageFooter">
@@ -338,7 +346,8 @@ export default function Cart() {
                                            required
                                            className="formInput"
                                            onChange={(e) => handleChange(e)}/>
-                                    {validation.cardholderName && <p className="errorMsg">{validation.cardholderName}</p>}
+                                    {validation.cardholderName &&
+                                        <p className="errorMsg">{validation.cardholderName}</p>}
                                 </div>
                                 <div>
                                     <input type="text"

@@ -9,41 +9,41 @@ import laptop_8 from '../assets/images/laptop_8.jpg';
 import laptop_9 from '../assets/images/laptop_9.jpg';
 
 export const stockAvailable = [
-   {
-      "id": 1,
-      "laptop": "HP ProBook 440 G8 Notebook (i7)",
-      "price": 295000,
-      "image": laptop_1
+    {
+        "id": 1,
+        "laptop": "HP ProBook 440 G8 Notebook (i7)",
+        "price": 295000,
+        "image": laptop_1
     },
     {
-      "id": 2,
-      "laptop": "Dell Inspiron 3511 (4GB / i5)",
-      "price": 198500,
-      "image": laptop_2
+        "id": 2,
+        "laptop": "Dell Inspiron 3511 (4GB / i5)",
+        "price": 198500,
+        "image": laptop_2
     },
     {
-      "id": 3,
-      "laptop": "Dell Inspiron 3511 (i5)",
-      "price": 185500,
-      "image": laptop_3
+        "id": 3,
+        "laptop": "Dell Inspiron 3511 (i5)",
+        "price": 185500,
+        "image": laptop_3
     },
     {
-      "id": 4,
-      "laptop": "ASUS M515 ( M515DA – EJ1039T )",
-      "price": 129000,
-      "image": laptop_4
+        "id": 4,
+        "laptop": "ASUS M515 ( M515DA – EJ1039T )",
+        "price": 129000,
+        "image": laptop_4
     },
     {
-      "id": 5,
-      "laptop": "Lenovo IdeaPad 3 15IIL05 (i5)",
-      "price": 145000,
-      "image": laptop_5
+        "id": 5,
+        "laptop": "Lenovo IdeaPad 3 15IIL05 (i5)",
+        "price": 145000,
+        "image": laptop_5
     },
     {
-      "id": 6,
-      "laptop": "Asus VivoBook K513EA-L11647T",
-      "price": 153000,
-      "image": laptop_6
+        "id": 6,
+        "laptop": "Asus VivoBook K513EA-L11647T",
+        "price": 153000,
+        "image": laptop_6
     },
     {
         "id": 7,
